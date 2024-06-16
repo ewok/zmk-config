@@ -16,8 +16,8 @@
 &lt { quick_tap_ms = <200>; };
 
 &mt {
-    quick_tap_ms = <50>;
-    tapping-term-ms = <50>;
+    quick_tap_ms = <200>;
+    flavor = "tap-unless-interrupted";
 };
 
 / {
