@@ -66,10 +66,10 @@
 
         raise_layer {
             bindings = <
-  &kp LC(PRINTSCREEN)  &kp SLASH     &kp N7        &kp N8        &kp N9        &kp MINUS    &kp C_PLAY_PAUSE  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_MUTE  &kp C_BRIGHTNESS_INC  &kp PRINTSCREEN
-  &mt LCTRL EQUAL      &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP        &kp RIGHT   &kp C_BRIGHTNESS_DEC  &mt RCTRL K_APP
-  &kp LEFT_ALT         &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT      &kp HOME          &kp PAGE_DOWN   &kp PG_UP     &kp END     &kp INS               &kp DEL
-                                     &trans        &trans        &trans        &lt 3 RET    &lt 3 BACKSPACE   &trans          &trans        &trans
+  &kp LC(PRINTSCREEN)      &kp KP_DIVIDE    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_PLAY_PAUSE  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_MUTE  &kp C_BRIGHTNESS_INC  &kp PRINTSCREEN
+  &mt LCTRL EQUAL          &kp KP_ASTERISK  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP        &kp RIGHT   &kp C_BRIGHTNESS_DEC  &mt RCTRL K_APP
+  &mt LEFT_ALT KP_NUMLOCK  &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp HOME          &kp PAGE_DOWN   &kp PG_UP     &kp END     &kp INS               &kp DEL
+                                            &trans     &trans     &trans     &lt 3 RET       &lt 3 BACKSPACE   &trans          &trans        &trans
             >;
         };
 
