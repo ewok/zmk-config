@@ -19,9 +19,9 @@
 
 / {
     behaviors {
-        space: space {
+        mt_t: mt_t {
             compatible = "zmk,behavior-hold-tap";
-            label = "SPACE";
+            label = "MT_T";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -29,28 +29,29 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        lt_h: lt_h {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_H";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
-
-    macros {
-        esc_ins: esc_ins {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp RIGHT &kp A>;
-            label = "ESC_INS";
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-  &kp RIGHT         &kp Q  &kp W     &kp E      &kp R               &kp T        &kp Y            &kp U               &kp I        &kp O               &kp P     &kp LEFT_BRACKET
-  &mt LCTRL ESCAPE  &kp A  &kp S     &kp D      &kp F               &kp G        &kp H            &kp J               &kp K        &kp L               &kp SEMI  &mt RCTRL SQT
-  &kp LALT          &kp Z  &kp X     &kp C      &kp V               &kp B        &kp N            &kp M               &kp COMMA    &kp DOT             &kp FSLH  &mt RALT RIGHT_BRACKET
-                           &kp LGUI  &lt 2 TAB  &space LSHFT SPACE  &lt 1 RET    &lt 1 BACKSPACE  &space RSHFT SPACE  &lt 2 GRAVE  &mt RGUI LG(SPACE)
+  &kp RIGHT         &kp Q  &kp W     &kp E      &kp R              &kp T          &kp Y              &kp U              &kp I        &kp O               &kp P     &kp LEFT_BRACKET
+  &mt LCTRL ESCAPE  &kp A  &kp S     &kp D      &kp F              &kp G          &kp H              &kp J              &kp K        &kp L               &kp SEMI  &mt RCTRL SQT
+  &kp LALT          &kp Z  &kp X     &kp C      &kp V              &kp B          &kp N              &kp M              &kp COMMA    &kp DOT             &kp FSLH  &mt RALT RIGHT_BRACKET
+                           &kp LGUI  &lt 2 TAB  &mt_t LSHFT SPACE  &lt_h 1 RET    &lt_h 1 BACKSPACE  &mt_t RSHFT SPACE  &lt 2 GRAVE  &mt RGUI LG(SPACE)
             >;
         };
 
