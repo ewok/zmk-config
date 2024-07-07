@@ -19,15 +19,15 @@
 
 / {
     behaviors {
-        mt_bal: mt_bal {
+        mt_twk: mt_twk {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT_BAL";
+            label = "MT_TWK";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+            flavor = "hold-preferred";
         };
 
         lt_h: lt_h {
@@ -51,7 +51,7 @@
   &kp RIGHT         &kp Q  &kp W     &kp E      &kp R                &kp T          &kp Y              &kp U                &kp I        &kp O               &kp P     &kp LEFT_BRACKET
   &mt LCTRL ESCAPE  &kp A  &kp S     &kp D      &kp F                &kp G          &kp H              &kp J                &kp K        &kp L               &kp SEMI  &mt RCTRL SQT
   &kp LALT          &kp Z  &kp X     &kp C      &kp V                &kp B          &kp N              &kp M                &kp COMMA    &kp DOT             &kp FSLH  &mt RALT RIGHT_BRACKET
-                           &kp LGUI  &lt 2 TAB  &mt_bal LSHFT SPACE  &lt_h 1 RET    &lt_h 1 BACKSPACE  &mt_bal RSHFT SPACE  &lt 2 GRAVE  &mt RGUI LG(SPACE)
+                           &kp LGUI  &lt 2 TAB  &mt_twk LSHFT SPACE  &lt_h 1 RET    &lt_h 1 BACKSPACE  &mt_twk RSHFT SPACE  &lt 2 GRAVE  &mt RGUI LG(SPACE)
             >;
         };
 
