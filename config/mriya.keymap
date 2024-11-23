@@ -84,10 +84,10 @@
 
         lower_gaming {
             bindings = <
-  &kp ESCAPE  &kp M   &kp I   &kp F5  &kp F6  &to 0     &trans  &trans  &trans  &trans  &trans  &trans
-  &trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-  &trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+  &kp ESCAPE  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
+  &kp F5      &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0    &trans  &trans  &trans  &trans  &trans  &trans
+  &kp F6      &kp M         &kp I         &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans        &to 0         &trans        &trans          &trans  &trans  &trans  &trans
             >;
         };
     };
