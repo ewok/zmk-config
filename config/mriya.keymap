@@ -39,6 +39,30 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
+
+        mt_left: mt_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 18 40 41 30 32 7 8 9 10 11 19 20 21 22 23 31 32 33 34 35 42 43>;
+        };
+
+        mt_right: mt_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -48,19 +72,19 @@
 
         default_layer {
             bindings = <
-  &kp RIGHT         &kp Q                   &kp W               &kp E                 &kp R                &kp T          &kp Y              &kp U                &kp I            &kp O                &kp P                       &kp LEFT_BRACKET
-  &mt LCTRL ESCAPE  &mt_twk LEFT_COMMAND A  &mt_twk LEFT_ALT S  &mt_twk LEFT_SHIFT D  &mt_twk LCTRL F      &kp G          &kp H              &mt_twk RCTRL J      &mt_twk RSHFT K  &mt_twk RIGHT_ALT L  &mt_twk RIGHT_COMMAND SEMI  &mt RCTRL SQT
-  &kp LALT          &kp Z                   &kp X               &kp C                 &kp V                &kp B          &kp N              &kp M                &kp COMMA        &kp DOT              &kp FSLH                    &mt RALT DOUBLE_QUOTES
-                                            &kp LGUI            &lt 2 TAB             &mt_twk LSHFT SPACE  &lt_h 1 RET    &lt_h 1 BACKSPACE  &mt_twk RSHFT SPACE  &lt 2 GRAVE      &mt RGUI LG(SPACE)
+  &kp RIGHT         &kp Q                    &kp W                &kp E                  &kp R                &kp T          &kp Y              &kp U                &kp I              &kp O                  &kp P                         &kp LEFT_BRACKET
+  &mt LCTRL ESCAPE  &mt_left LEFT_COMMAND A  &mt_left LEFT_ALT S  &mt_left LEFT_SHIFT D  &mt_left LCTRL F     &kp G          &kp H              &mt_right RCTRL J    &mt_right RSHFT K  &mt_right RIGHT_ALT L  &mt_right RIGHT_COMMAND SEMI  &mt RCTRL SQT
+  &kp LALT          &kp Z                    &kp X                &kp C                  &kp V                &kp B          &kp N              &kp M                &kp COMMA          &kp DOT                &kp FSLH                      &mt RALT DOUBLE_QUOTES
+                                             &kp LGUI             &lt 2 TAB              &mt_twk LSHFT SPACE  &lt_h 1 RET    &lt_h 1 BACKSPACE  &mt_twk RSHFT SPACE  &lt 2 GRAVE        &mt RGUI LG(SPACE)
             >;
         };
 
         lower_layer {
             bindings = <
-  &kp PIPE             &kp NUMBER_1               &kp NUMBER_2     &kp NUMBER_3        &kp NUMBER_4               &kp N5                  &kp NUMBER_6           &kp N7              &kp N8              &kp N9                         &kp N0                                   &kp BACKSLASH
-  &mt LCTRL MINUS      &mt_twk LEFT_COMMAND EXCL  &mt_twk LALT AT  &mt_twk LSHFT HASH  &mt_twk LEFT_CONTROL DLLR  &kp PRCNT               &kp CARET              &mt_twk RCTRL AMPS  &mt_twk RSHFT STAR  &mt_twk RALT LEFT_PARENTHESIS  &mt_twk RIGHT_COMMAND RIGHT_PARENTHESIS  &mt RCTRL EQUAL
-  &mt LALT UNDERSCORE  &kp ASTERISK               &kp LESS_THAN    &kp LEFT_BRACE      &kp LEFT_BRACKET           &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET   &kp RIGHT_BRACE     &kp GREATER_THAN               &kp SLASH                                &mt RIGHT_ALT PLUS
-                                                  &trans           &trans              &trans                     &trans                  &kp LA(BACKSPACE)      &trans              &trans              &trans
+  &kp PIPE             &kp NUMBER_1                &kp NUMBER_2      &kp NUMBER_3         &kp NUMBER_4                &kp N5                  &kp NUMBER_6           &kp N7                &kp N8                &kp N9                           &kp N0                                     &kp BACKSLASH
+  &mt LCTRL MINUS      &mt_left LEFT_COMMAND EXCL  &mt_left LALT AT  &mt_left LSHFT HASH  &mt_left LEFT_CONTROL DLLR  &kp PRCNT               &kp CARET              &mt_right RCTRL AMPS  &mt_right RSHFT STAR  &mt_right RALT LEFT_PARENTHESIS  &mt_right RIGHT_COMMAND RIGHT_PARENTHESIS  &mt RCTRL EQUAL
+  &mt LALT UNDERSCORE  &kp ASTERISK                &kp LESS_THAN     &kp LEFT_BRACE       &kp LEFT_BRACKET            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET     &kp RIGHT_BRACE       &kp GREATER_THAN                 &kp SLASH                                  &mt RIGHT_ALT PLUS
+                                                   &trans            &trans               &trans                      &trans                  &kp LA(BACKSPACE)      &trans                &trans                &trans
             >;
         };
 
