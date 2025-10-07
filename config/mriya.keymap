@@ -48,10 +48,10 @@
 
         default_layer {
             bindings = <
-  &kp RIGHT         &kp Q               &kp W           &kp E             &kp R                &kp T          &kp Y              &kp U                &kp I        &kp O               &kp P                   &kp LEFT_BRACKET
-  &mt LCTRL ESCAPE  &mt LEFT_COMMAND A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F          &kp G          &kp H              &mt RCTRL J          &mt RSHFT K  &mt RIGHT_ALT L     &mt RIGHT_COMMAND SEMI  &mt RCTRL SQT
-  &kp LALT          &kp Z               &kp X           &kp C             &kp V                &kp B          &kp N              &kp M                &kp COMMA    &kp DOT             &kp FSLH                &mt RALT DOUBLE_QUOTES
-                                        &kp LGUI        &lt 2 TAB         &mt_twk LSHFT SPACE  &lt_h 1 RET    &lt_h 1 BACKSPACE  &mt_twk RSHFT SPACE  &lt 2 GRAVE  &mt RGUI LG(SPACE)
+  &kp RIGHT         &kp Q                   &kp W               &kp E                 &kp R                &kp T          &kp Y              &kp U                &kp I            &kp O                &kp P                       &kp LEFT_BRACKET
+  &mt LCTRL ESCAPE  &mt_twk LEFT_COMMAND A  &mt_twk LEFT_ALT S  &mt_twk LEFT_SHIFT D  &mt_twk LCTRL F      &kp G          &kp H              &mt_twk RCTRL J      &mt_twk RSHFT K  &mt_twk RIGHT_ALT L  &mt_twk RIGHT_COMMAND SEMI  &mt RCTRL SQT
+  &kp LALT          &kp Z                   &kp X               &kp C                 &kp V                &kp B          &kp N              &kp M                &kp COMMA        &kp DOT              &kp FSLH                    &mt RALT DOUBLE_QUOTES
+                                            &kp LGUI            &lt 2 TAB             &mt_twk LSHFT SPACE  &lt_h 1 RET    &lt_h 1 BACKSPACE  &mt_twk RSHFT SPACE  &lt 2 GRAVE      &mt RGUI LG(SPACE)
             >;
         };
 
