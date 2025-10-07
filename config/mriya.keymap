@@ -13,7 +13,10 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick_tap_ms = <200>; };
+&lt {
+    quick_tap_ms = <200>;
+    flavor = "balanced";
+};
 
 &mt { quick_tap_ms = <200>; };
 
@@ -75,25 +78,25 @@
   &none  &kp Q                    &kp W                &kp E                  &kp R             &kp T          &kp Y              &kp U              &kp I              &kp O                  &kp P                         &none
   &none  &mt_left LEFT_COMMAND A  &mt_left LEFT_ALT S  &mt_left LEFT_SHIFT D  &mt_left LCTRL F  &kp G          &kp H              &mt_right RCTRL J  &mt_right RSHFT K  &mt_right RIGHT_ALT L  &mt_right RIGHT_COMMAND SEMI  &none
   &none  &kp Z                    &kp X                &kp C                  &kp V             &kp B          &kp N              &kp M              &kp COMMA          &kp DOT                &kp APOS                      &none
-                                  &none                &lt 2 ESCAPE           &kp SPACE         &lt_h 1 RET    &lt_h 1 BACKSPACE  &kp SPACE          &lt 2 GRAVE        &none
+                                  &none                &kp ESCAPE             &lt 2 SPACE       &lt_h 1 RET    &lt_h 1 BACKSPACE  &lt 2 GRAVE        &lt 5 GRAVE        &none
             >;
         };
 
         lower_layer {
             bindings = <
-  &none  &kp NUMBER_1               &kp NUMBER_2             &kp NUMBER_3          &kp NUMBER_4                 &kp N5                  &kp NUMBER_6           &kp N7                      &kp N8                    &kp N9                      &kp N0                                &none
-  &none  &mt_left LEFT_COMMAND TAB  &mt_left LALT BACKSLASH  &mt_left LSHFT MINUS  &mt_left LEFT_CONTROL EQUAL  &kp PRCNT               &kp LEFT_ARROW         &mt_right RCTRL DOWN_ARROW  &mt_right RSHFT UP_ARROW  &mt_right RALT RIGHT_ARROW  &mt_right RIGHT_COMMAND LEFT_BRACKET  &none
-  &none  &kp ASTERISK               &kp LESS_THAN            &kp LEFT_BRACE        &kp LEFT_BRACKET             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET           &kp RIGHT_BRACE           &kp GREATER_THAN            &kp SLASH                             &none
-                                    &trans                   &trans                &trans                       &trans                  &kp LA(BACKSPACE)      &trans                      &trans                    &trans
+  &none  &kp NUMBER_1                 &kp NUMBER_2         &kp NUMBER_3          &kp NUMBER_4                 &kp N5                  &kp NUMBER_6           &kp N7                      &kp N8                    &kp N9                      &kp N0                                &none
+  &none  &mt_left LEFT_COMMAND SLASH  &mt_left LALT ASTRK  &mt_left LSHFT MINUS  &mt_left LEFT_CONTROL EQUAL  &kp PRCNT               &kp LEFT_ARROW         &mt_right RCTRL DOWN_ARROW  &mt_right RSHFT UP_ARROW  &mt_right RALT RIGHT_ARROW  &mt_right RIGHT_COMMAND LEFT_BRACKET  &none
+  &none  &kp BACKSLASH                &kp LESS_THAN        &kp LEFT_BRACE        &kp LEFT_BRACKET             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET           &kp RIGHT_BRACE           &kp GREATER_THAN            &kp SLASH                             &none
+                                      &trans               &trans                &trans                       &trans                  &kp LA(BACKSPACE)      &trans                      &trans                    &trans
             >;
         };
 
         raise_layer {
             bindings = <
-  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_VOL_DN      &kp C_VOL_UP   &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRIGHTNESS_INC  &none
-  &mt LCTRL F1  &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp HOME          &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &kp C_BRIGHTNESS_DEC  &none
-  &mt LALT F7   &kp F8        &kp F9        &kp F10       &kp F11       &kp F12         &kp C_PLAY_PAUSE  &kp C_STOP     &kp INS       &kp DELETE    &kp PRINTSCREEN       &none
-                              &trans        &trans        &trans        &to 3           &trans            &trans         &trans        &trans
+  &none  &kp TAB           &kp F1  &kp F2   &kp F3   &kp F4     &kp C_VOL_DN      &kp C_VOL_UP   &kp C_BRI_DN  &kp C_BRI_UP  &kp LS(TAB)          &none
+  &none  &kp LEFT_COMMAND  &kp F5  &kp F6   &kp F7   &kp F8     &kp HOME          &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &kp PRINTSCREEN      &none
+  &none  &kp LG(SPACE)     &kp F9  &kp F10  &kp F11  &kp F12    &kp C_PLAY_PAUSE  &kp C_STOP     &kp INS       &kp DELETE    &kp LC(PRINTSCREEN)  &none
+                           &trans  &trans   &trans   &to 3      &trans            &trans         &trans        &trans
             >;
         };
 
@@ -112,6 +115,15 @@
   &kp F5      &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0    &trans  &trans  &trans  &trans  &trans  &trans
   &kp F8      &kp M         &kp I         &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                             &trans        &to 0         &trans        &trans          &trans  &trans  &trans  &trans
+            >;
+        };
+
+        connection {
+            bindings = <
+  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+  &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+  &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans
             >;
         };
     };
