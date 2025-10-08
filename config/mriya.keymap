@@ -75,10 +75,10 @@
 
         default_layer {
             bindings = <
-  &none  &kp Q                    &kp W                &kp E                  &kp R             &kp T          &kp Y              &kp U              &kp I              &kp O                  &kp P                         &none
-  &none  &mt_left LEFT_COMMAND A  &mt_left LEFT_ALT S  &mt_left LEFT_SHIFT D  &mt_left LCTRL F  &kp G          &kp H              &mt_right RCTRL J  &mt_right RSHFT K  &mt_right RIGHT_ALT L  &mt_right RIGHT_COMMAND SEMI  &none
-  &none  &kp Z                    &kp X                &kp C                  &kp V             &kp B          &kp N              &kp M              &kp COMMA          &kp DOT                &kp APOS                      &none
-                                  &none                &kp ESCAPE             &lt 2 SPACE       &lt_h 1 RET    &lt_h 1 BACKSPACE  &lt 2 SPACE        &lt 5 GRAVE        &none
+  &none  &kp Q                    &kp W                &kp E                  &kp R             &kp T        &kp Y            &kp U              &kp I              &kp O                  &kp P                         &none
+  &none  &mt_left LEFT_COMMAND A  &mt_left LEFT_ALT S  &mt_left LEFT_SHIFT D  &mt_left LCTRL F  &kp G        &kp H            &mt_right RCTRL J  &mt_right RSHFT K  &mt_right RIGHT_ALT L  &mt_right RIGHT_COMMAND SEMI  &none
+  &none  &kp Z                    &kp X                &kp C                  &kp V             &kp B        &kp N            &kp M              &kp COMMA          &kp DOT                &kp APOS                      &none
+                                  &none                &kp ESCAPE             &lt 2 SPACE       &lt 1 RET    &lt 1 BACKSPACE  &lt 2 SPACE        &lt 5 GRAVE        &none
             >;
         };
 
@@ -87,25 +87,25 @@
   &none  &kp NUMBER_1                 &kp NUMBER_2         &kp NUMBER_3          &kp NUMBER_4                 &kp N5                  &kp NUMBER_6           &kp N7                      &kp N8                    &kp N9                      &kp N0                                &none
   &none  &mt_left LEFT_COMMAND EQUAL  &mt_left LALT SLASH  &mt_left LSHFT ASTRK  &mt_left LEFT_CONTROL MINUS  &kp PLUS                &kp LEFT_ARROW         &mt_right RCTRL DOWN_ARROW  &mt_right RSHFT UP_ARROW  &mt_right RALT RIGHT_ARROW  &mt_right RIGHT_COMMAND LEFT_BRACKET  &none
   &none  &kp BACKSLASH                &kp LESS_THAN        &kp LEFT_BRACE        &kp LEFT_BRACKET             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET           &kp RIGHT_BRACE           &kp GREATER_THAN            &kp SLASH                             &none
-                                      &trans               &trans                &trans                       &trans                  &kp LA(BACKSPACE)      &trans                      &trans                    &trans
+                                      &trans               &trans                &trans                       &kp RG(SPACE)           &kp LG(SPACE)          &trans                      &trans                    &trans
             >;
         };
 
         raise_layer {
             bindings = <
-  &none  &kp TAB           &kp F1  &kp F2   &kp F3   &kp F4     &kp C_VOL_DN      &kp C_VOL_UP   &kp C_BRI_DN  &kp C_BRI_UP  &kp LS(TAB)          &none
-  &none  &kp LEFT_COMMAND  &kp F5  &kp F6   &kp F7   &kp F8     &kp HOME          &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &kp PRINTSCREEN      &none
-  &none  &kp LG(SPACE)     &kp F9  &kp F10  &kp F11  &kp F12    &kp C_PLAY_PAUSE  &kp C_STOP     &kp INS       &kp DELETE    &kp LC(PRINTSCREEN)  &none
-                           &trans  &trans   &trans   &to 3      &trans            &trans         &trans        &trans
+  &none  &kp CAPS          &kp F1  &kp F2   &kp F3   &kp F4     &kp C_PP  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_MUTE  &kp C_BRI_INC        &none
+  &none  &kp LEFT_COMMAND  &kp F5  &kp F6   &kp F7   &kp F8     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &kp C_BRI_DEC        &none
+  &none  &kp PRINTSCREEN   &kp F9  &kp F10  &kp F11  &kp F12    &kp INS   &kp TAB        &kp LS(TAB)   &kp DELETE  &kp LC(PRINTSCREEN)  &none
+                           &trans  &trans   &trans   &to 3      &to 3     &trans         &trans        &trans
             >;
         };
 
         gaming {
             bindings = <
-  &kp CAPSLOCK  &kp Q  &kp W     &kp E    &kp R      &kp T          &kp Y          &kp U      &kp I      &kp O          &kp P     &kp LEFT_BRACKET
-  &kp LSHIFT    &kp A  &kp S     &kp D    &kp F      &kp G          &kp H          &kp J      &kp K      &kp L          &kp SEMI  &kp RSHIFT
-  &kp LCTRL     &kp Z  &kp X     &kp C    &kp V      &kp B          &kp N          &kp M      &kp COMMA  &kp DOT        &kp FSLH  &kp RCTRL
-                       &kp LALT  &kp TAB  &kp SPACE  &lt_h 4 RET    &kp BACKSPACE  &kp SPACE  &none      &kp RIGHT_ALT
+  &kp CAPSLOCK  &kp Q  &kp W     &kp E    &kp R      &kp T        &kp Y            &kp U      &kp I      &kp O          &kp P     &kp LEFT_BRACKET
+  &kp LSHIFT    &kp A  &kp S     &kp D    &kp F      &kp G        &kp H            &kp J      &kp K      &kp L          &kp SEMI  &kp RSHIFT
+  &kp LCTRL     &kp Z  &kp X     &kp C    &kp V      &kp B        &kp N            &kp M      &kp COMMA  &kp DOT        &kp FSLH  &kp RCTRL
+                       &kp LALT  &kp TAB  &kp SPACE  &lt 4 RET    &lt 4 BACKSPACE  &kp SPACE  &none      &kp RIGHT_ALT
             >;
         };
 
@@ -114,7 +114,7 @@
   &kp ESCAPE  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
   &kp F5      &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0    &trans  &trans  &trans  &trans  &trans  &trans
   &kp F8      &kp M         &kp I         &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans        &to 0         &trans        &trans          &trans  &trans  &trans  &trans
+                            &trans        &trans        &to 0         &trans          &trans  &to 0   &trans  &trans
             >;
         };
 
