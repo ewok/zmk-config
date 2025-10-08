@@ -66,16 +66,16 @@
   &none  &kp NUMBER_1                 &kp NUMBER_2         &kp NUMBER_3          &kp NUMBER_4                 &kp N5                  &kp NUMBER_6           &kp N7                      &kp N8                    &kp N9                      &kp N0                                &none
   &none  &mt_left LEFT_COMMAND EQUAL  &mt_left LALT SLASH  &mt_left LSHFT ASTRK  &mt_left LEFT_CONTROL MINUS  &kp PLUS                &kp LEFT_ARROW         &mt_right RCTRL DOWN_ARROW  &mt_right RSHFT UP_ARROW  &mt_right RALT RIGHT_ARROW  &mt_right RIGHT_COMMAND LEFT_BRACKET  &none
   &none  &kp BACKSLASH                &kp LESS_THAN        &kp LEFT_BRACE        &kp LEFT_BRACKET             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET           &kp RIGHT_BRACE           &kp GREATER_THAN            &kp SLASH                             &none
-                                      &trans               &trans                &trans                       &kp RG(SPACE)           &kp LG(SPACE)          &trans                      &trans                    &trans
+                                      &trans               &trans                &kp SPACE                    &kp RET                 &kp BACKSPACE          &kp SPACE                   &trans                    &trans
             >;
         };
 
         raise_layer {
             bindings = <
-  &none  &kp CAPS          &kp F1  &kp F2   &kp F3   &kp F4     &kp C_PP  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_MUTE  &kp C_BRI_INC        &none
-  &none  &kp LEFT_COMMAND  &kp F5  &kp F6   &kp F7   &kp F8     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &kp C_BRI_DEC        &none
-  &none  &kp PRINTSCREEN   &kp F9  &kp F10  &kp F11  &kp F12    &kp INS   &kp TAB        &kp LS(TAB)   &kp DELETE  &kp LC(PRINTSCREEN)  &none
-                           &trans  &trans   &trans   &to 3      &to 3     &trans         &trans        &trans
+  &none  &kp CAPS          &kp F1  &kp F2   &kp F3         &kp F4     &kp C_PP  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_MUTE  &kp C_BRI_INC        &none
+  &none  &kp LEFT_COMMAND  &kp F5  &kp F6   &kp F7         &kp F8     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &kp C_BRI_DEC        &none
+  &none  &kp PRINTSCREEN   &kp F9  &kp F10  &kp F11        &kp F12    &kp INS   &kp TAB        &kp LS(TAB)   &kp DELETE  &kp LC(PRINTSCREEN)  &none
+                           &trans  &trans   &kp LG(SPACE)  &to 3      &to 3     &kp RG(SPACE)  &trans        &trans
             >;
         };
 
