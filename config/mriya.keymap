@@ -47,7 +47,19 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        lbrc {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <9 10>;
+        };
+
+        aps {
+            bindings = <&kp SQT>;
+            key-positions = <21 22>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -56,26 +68,26 @@
             bindings = <
   &none  &kp Q                    &kp W                &kp E                  &kp R             &kp T        &kp Y            &kp U              &kp I              &kp O                  &kp P                         &none
   &none  &mt_left LEFT_COMMAND A  &mt_left LEFT_ALT S  &mt_left LEFT_SHIFT D  &mt_left LCTRL F  &kp G        &kp H            &mt_right RCTRL J  &mt_right RSHFT K  &mt_right RIGHT_ALT L  &mt_right RIGHT_COMMAND SEMI  &none
-  &none  &kp Z                    &kp X                &kp C                  &kp V             &kp B        &kp N            &kp M              &kp COMMA          &kp DOT                &kp APOS                      &none
+  &none  &kp Z                    &kp X                &kp C                  &kp V             &kp B        &kp N            &kp M              &kp COMMA          &kp DOT                &kp SLASH                     &none
                                   &none                &kp ESCAPE             &lt 2 SPACE       &lt 1 RET    &lt 1 BACKSPACE  &lt 2 SPACE        &lt 5 GRAVE        &none
             >;
         };
 
         lower_layer {
             bindings = <
-  &none  &kp NUMBER_1                 &kp NUMBER_2         &kp NUMBER_3          &kp NUMBER_4                 &kp N5                  &kp NUMBER_6           &kp N7                      &kp N8                    &kp N9                      &kp N0                                &none
-  &none  &mt_left LEFT_COMMAND EQUAL  &mt_left LALT SLASH  &mt_left LSHFT ASTRK  &mt_left LEFT_CONTROL MINUS  &kp PLUS                &kp LEFT_ARROW         &mt_right RCTRL DOWN_ARROW  &mt_right RSHFT UP_ARROW  &mt_right RALT RIGHT_ARROW  &mt_right RIGHT_COMMAND LEFT_BRACKET  &none
-  &none  &kp BACKSLASH                &kp LESS_THAN        &kp LEFT_BRACE        &kp LEFT_BRACKET             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET           &kp RIGHT_BRACE           &kp GREATER_THAN            &kp SLASH                             &none
-                                      &trans               &trans                &kp SPACE                    &kp RET                 &kp BACKSPACE          &kp SPACE                   &trans                    &trans
+  &none  &kp NUMBER_1                 &kp NUMBER_2         &kp NUMBER_3          &kp NUMBER_4                 &kp N5                  &kp NUMBER_6           &kp N7                      &kp N8                &kp N9               &kp N0                       &none
+  &none  &mt_left LEFT_COMMAND EQUAL  &mt_left LALT SLASH  &mt_left LSHFT ASTRK  &mt_left LEFT_CONTROL MINUS  &kp PLUS                &kp PERCENT            &mt_right RCTRL UNDERSCORE  &mt_right RSHFT HASH  &mt_right RALT PIPE  &mt_right RIGHT_COMMAND SQT  &none
+  &none  &kp BACKSLASH                &kp LESS_THAN        &kp LEFT_BRACE        &kp LEFT_BRACKET             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET           &kp RIGHT_BRACE       &kp GREATER_THAN     &kp DOUBLE_QUOTES            &none
+                                      &trans               &kp TAB               &kp SPACE                    &kp RET                 &kp BACKSPACE          &kp SPACE                   &kp LS(TAB)           &trans
             >;
         };
 
         raise_layer {
             bindings = <
-  &none  &kp CAPS          &kp F1  &kp F2   &kp F3         &kp F4     &kp C_PP  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_MUTE  &kp C_BRI_INC        &none
-  &none  &kp LEFT_COMMAND  &kp F5  &kp F6   &kp F7         &kp F8     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &kp C_BRI_DEC        &none
-  &none  &kp PRINTSCREEN   &kp F9  &kp F10  &kp F11        &kp F12    &kp INS   &kp TAB        &kp LS(TAB)   &kp DELETE  &kp LC(PRINTSCREEN)  &none
-                           &trans  &trans   &kp LG(SPACE)  &to 3      &to 3     &kp RG(SPACE)  &trans        &trans
+  &none  &kp CAPS          &kp F1  &kp F2   &kp F3         &kp F4     &kp C_PP  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_MUTE       &kp C_BRI_INC        &none
+  &none  &kp LEFT_COMMAND  &kp F5  &kp F6   &kp F7         &kp F8     &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp C_BRI_DEC        &none
+  &none  &kp PRINTSCREEN   &kp F9  &kp F10  &kp F11        &kp F12    &kp HOME  &kp PAGE_DOWN   &kp PG_UP     &kp END          &kp LC(PRINTSCREEN)  &none
+                           &trans  &trans   &kp LG(SPACE)  &to 3      &to 3     &kp RG(SPACE)   &trans        &trans
             >;
         };
 
