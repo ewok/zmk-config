@@ -62,7 +62,7 @@
 
         default_layer {
             bindings = <
-  &none      &kp Q  &kp W     &kp E      &kp R             &kp T        &kp Y            &kp U            &kp I        &kp O     &kp P          &kp LEFT_BRACKET
+  &kp LCMD   &kp Q  &kp W     &kp E      &kp R             &kp T        &kp Y            &kp U            &kp I        &kp O     &kp P          &mt RCMD LBKT
   &kp LCTRL  &kp A  &kp S     &kp D      &kp F             &kp G        &kp H            &kp J            &kp K        &kp L     &kp SEMICOLON  &mt RCTRL SQT
   &kp LALT   &kp Z  &kp X     &kp C      &kp V             &kp B        &kp N            &kp M            &kp COMMA    &kp DOT   &kp SLASH      &mt RALT DQT
                     &kp LCMD  &lt 2 TAB  &mt LSHIFT SPACE  &lt 1 RET    &lt 1 BACKSPACE  &mt RSHFT SPACE  &lt 2 GRAVE  &kp RGUI
@@ -71,18 +71,18 @@
 
         sym {
             bindings = <
-  &none      &kp NUMBER_1       &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp NUMBER_6   &kp N7     &kp N8       &kp N9            &kp N0    &none
-  &kp LCTRL  &kp EXCL           &kp SLASH      &kp ASTRK     &kp MINUS     &kp PLUS     &kp PERCENT    &kp UNDER  &kp HASH     &kp BACKSLASH     &kp SEMI  &kp RCTRL
-  &kp LALT   &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp EXCL      &kp AT        &kp CARET    &kp DLLR       &kp AMPS   &kp PIPE     &kp GREATER_THAN  &kp SQT   &kp RALT
-                                &trans         &kp TAB       &kp SPACE     &kp RET      &kp BACKSPACE  &kp SPACE  &kp LS(TAB)  &trans
+  &kp LCMD   &kp NUMBER_1       &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp N5                  &kp NUMBER_6   &kp N7     &kp N8       &kp N9            &kp N0    &kp RCMD
+  &kp LCTRL  &kp EQUAL          &kp SLASH      &kp ASTRK     &kp MINUS     &kp PLUS                &kp PERCENT    &kp UNDER  &kp HASH     &kp BACKSLASH     &kp SEMI  &kp RCTRL
+  &kp LALT   &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp LBRC      &kp LBKT      &kp LEFT_PARENTHESIS    &kp RPAR       &kp RBKT   &kp RBRC     &kp GREATER_THAN  &kp SQT   &kp RALT
+                                &trans         &kp ESCAPE    &trans        &kp RET                 &kp BACKSPACE  &trans     &kp LS(TAB)  &trans
             >;
         };
 
         nav {
             bindings = <
-  &none  &kp CAPS          &kp F1                &kp F2                  &kp F3                    &kp F4     &kp C_PP              &kp C_VOL_DN    &kp C_VOL_UP  &kp C_MUTE               &kp C_BRI_INC        &none
-  &none  &kp LEFT_COMMAND  &mt_left LEFT_ALT F5  &mt_left LEFT_SHIFT F6  &mt_left LEFT_CONTROL F7  &kp F8     &kp LEFT              &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW          &kp C_BRI_DEC        &none
-  &none  &kp PRINTSCREEN   &kp F9                &kp F10                 &kp F11                   &kp F12    &mt_right RCTRL HOME  &kp PAGE_DOWN   &kp PG_UP     &mt_right RIGHT_ALT END  &kp LC(PRINTSCREEN)  &none
+  &none  &kp CAPS          &kp F1                &kp F2                  &kp F3                    &kp F4     &kp C_PP              &kp C_VOL_DN    &kp C_VOL_UP  &kp C_MUTE               &kp C_BRI_INC        &kp RCMD
+  &none  &kp LEFT_COMMAND  &mt_left LEFT_ALT F5  &mt_left LEFT_SHIFT F6  &mt_left LEFT_CONTROL F7  &kp F8     &kp LEFT              &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW          &kp C_BRI_DEC        &kp RCTRL
+  &none  &kp PRINTSCREEN   &kp F9                &kp F10                 &kp F11                   &kp F12    &mt_right RCTRL HOME  &kp PAGE_DOWN   &kp PG_UP     &mt_right RIGHT_ALT END  &kp LC(PRINTSCREEN)  &kp RIGHT_ALT
                            &trans                &mo 5                   &kp LG(SPACE)             &none      &none                 &kp RG(SPACE)   &mo 5         &trans
             >;
         };
