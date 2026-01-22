@@ -137,16 +137,16 @@
   &kp LCMD   &kp N1     &kp N2    &kp N3        &kp N4     &kp N5        &kp PERCENT            &kp UNDER         &kp HASH         &kp BACKSLASH     &kp PIPE           &kp RCMD
   &kp LCTRL  &kp N6     &kp N7    &kp N8        &kp N9     &kp N0        &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp LESS_THAN     &kp APOS           &kp RCTRL
   &kp LALT   &kp EQUAL  &kp FSLH  &kp ASTERISK  &kp MINUS  &kp PLUS      &kp RIGHT_PARENTHESIS  &kp RBKT          &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp RALT
-                        &trans    &kp PIPE      &trans     &kp ESCAPE    &kp ESCAPE             &trans            &kp GRAVE        &trans
+                        &trans    &kp PIPE      &trans     &kp ESCAPE    &kp BACKSPACE          &trans            &kp GRAVE        &trans
             >;
         };
 
         nav {
             bindings = <
-  &kp LCMD          &trans           &kp F1  &kp F2   &kp F3   &kp F4        &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP  &kp C_BRI_DN     &kp C_BRI_UP         &kp RCMD
-  &mt LCTRL ESCAPE  &none            &kp F5  &kp F6   &kp F7   &kp F8        &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp CAPS             &kp RCTRL
-  &kp LALT          &kp PRINTSCREEN  &kp F9  &kp F10  &kp F11  &kp F12       &kp HOME       &kp PAGE_DOWN   &kp PG_UP     &kp END          &kp LC(PRINTSCREEN)  &kp RIGHT_ALT
-                                     &trans  &trans   &trans   &kp DELETE    &kp BACKSPACE  &trans          &kp TILDE     &trans
+  &kp LCMD          &trans           &kp F1  &kp F2   &kp F3   &kp F4        &kp C_MUTE  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_BRI_DN     &kp C_BRI_UP         &kp RCMD
+  &mt LCTRL ESCAPE  &none            &kp F5  &kp F6   &kp F7   &kp F8        &kp LEFT    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp CAPS             &kp RCTRL
+  &kp LALT          &kp PRINTSCREEN  &kp F9  &kp F10  &kp F11  &kp F12       &kp HOME    &kp PAGE_DOWN   &kp PG_UP     &kp END          &kp LC(PRINTSCREEN)  &kp RIGHT_ALT
+                                     &trans  &trans   &trans   &kp ESCAPE    &kp DELETE  &trans          &kp TILDE     &trans
             >;
         };
 
